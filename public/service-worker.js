@@ -1,7 +1,6 @@
 const FILES_TO_CACHE = [
-    "/favicon.ico",
     "/service-worker.js",
-    "manifest.webmanifest",
+    "public/manifest.webmanifest",
     "public/icons/icon-192x192.png",
     "public/icons/icon-512x512.png",
     "public/index.html",
