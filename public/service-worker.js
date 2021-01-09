@@ -1,10 +1,10 @@
 const FILES_TO_CACHE = [
+    "/",
     "/service-worker.js",
     "public/manifest.webmanifest",
     "public/icons/icon-192x192.png",
     "public/icons/icon-512x512.png",
     "public/index.html",
-    "/",
     "public/styles.css",
     "public/service-worker.js",
     "public/index.js",
