@@ -16,7 +16,7 @@ request.onsuccess = function (event) {
 };
 
 request.onerror = function (event) {
-    console.log("Woops! " + event.target.errorCode);
+    console.log("Not working! " + event.target.errorCode);
 };
 
 function saveRecord(record) {
@@ -27,9 +27,19 @@ function saveRecord(record) {
 }
 
 function checkDatabase() {
-    const transaction = db.transaction(["pending"], "readwrite");
-    const store = transaction.objectStore("pending");
-    const getAll = store.getAll();
+    // const transaction = db.transaction(["pending"], "readwrite");
+    // const store = transaction.objectStore("pending");
+    // const getAll = store.getAll();
+
+    mongoose.connect(
+        process.env.MONGODB_URI || 'mongodb://localhost/desolate-dusk-73252',
+        {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+            useCreateIndex: true,
+            useFindAndModify: false
+        }
+    );
 
     getAll.onsuccess = function () {
         if (getAll.result.length > 0) {
