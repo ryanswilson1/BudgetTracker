@@ -20,6 +20,7 @@
   
   # Installation
   The following necessary dependencies must be installed to run the application properly: node server.js to run on localhost port 3000
+  The app is deployed on Heroku and can be viewed at https://desolate-dusk-73252.herokuapp.com/
   
   # Usage
   ​This application is used for 
